@@ -1,3 +1,4 @@
+'use client';
 import { useState, useEffect } from "react";
 import styles from "./otp.module.css";
 import Swal from "sweetalert2";
