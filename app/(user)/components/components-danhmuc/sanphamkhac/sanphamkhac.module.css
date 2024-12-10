@@ -1,0 +1,36 @@
+/* sanphamkhac.module.css */
+
+.container {
+  width: 1170px;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0px auto;
+}
+
+.menu-home .title-page-menu {
+  position: relative;
+  font-size: 25px;
+  margin-bottom: 32px;
+  background: #efefef;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 14px 0 12px;
+}
+
+.all-menu-other {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px -15px;
+}
+
+.all-menu-other .item {
+  width: calc(100% / 3 - 30px);
+  margin: 0px 15px 30px;
+  text-align: center;
+}
+
+.all-menu-other .name {
+  font-size: 18px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}

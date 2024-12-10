@@ -1,0 +1,225 @@
+.nav {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%;
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.sidebar {
+  width: 25%;
+  height: 400px;
+  background-color: #f3f3f3;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  border-radius: 15px;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.voucher-input {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.voucherinput input {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #000000;
+  border-radius: 14px;
+  outline: none;
+}
+
+.voucherinput input:focus {
+  border-color: #559167;
+}
+
+.voucherinput button {
+  padding: 10px;
+  margin-left: 10px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.voucherinput button:hover {
+  background-color: #0056b3;
+}
+.total {
+  align-items: center;
+  margin-top: 15px;
+}
+.tt {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.uudai {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.ttt {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+#thtt {
+  padding: 10px;
+  width: 250px;
+  margin: 40px 0px 0px 216%;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#thtt:hover {
+  background-color: #0056b3;
+}
+.content {
+  width: 70%;
+  padding: 30px;
+  margin-bottom: 100px;
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+}
+.cartcont {
+  width: 70%;
+  padding: 30px;
+}
+.quantitycontrol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quantitycontrol button {
+  width: 20px;
+  height: 20px;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 360px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.quantitycontrol button:hover {
+  background-color: #0056b3;
+}
+
+.quantitycontrol input {
+  width: 40px;
+  text-align: center;
+  border: none;
+  font-size: 16px;
+}
+
+.cartcontainer {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+}
+
+.carttable {
+  width: 100%;
+  border-collapse: collapse;
+}
+.carttable th {
+  text-align: center;
+  vertical-align: middle;
+  padding: 20px;
+}
+.carttable td {
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.carttable thead {
+  margin-bottom: 20px;
+}
+.cart-table td p {
+  color: red;
+}
+.mh {
+  display: block;
+  justify-items: center;
+  text-align: center;
+}
+.mh p {
+  padding: 2px;
+}
+/* From Uiverse.io by vinodjangid07 */
+.Btn {
+  width: 140px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(
+    to right,
+    #021d39,
+    #0056b3,
+    #021d39,
+    #021d39,
+    #0056b3,
+    #021d39
+  );
+  background-size: 250%;
+  background-position: left;
+  color: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 1s;
+  overflow: hidden;
+}
+
+.Btn::before {
+  position: absolute;
+  content: "Mua sắm ngay";
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 97%;
+  height: 90%;
+  border-radius: 8px;
+  transition-duration: 1s;
+  background-color: rgba(69, 68, 68, 0.842);
+  background-size: 200%;
+}
+
+.Btn:hover {
+  background-position: right;
+  transition-duration: 1s;
+}
+
+.Btn:hover::before {
+  background-position: right;
+  transition-duration: 1s;
+}
+
+.Btn:active {
+  transform: scale(0.95);
+}

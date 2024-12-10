@@ -1,0 +1,16 @@
+.slider-collection {
+  max-width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.slider-collection .item img {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 600px) {
+  .slider-collection {
+    overflow: hidden;
+    margin: auto;
+    
+  }
+}

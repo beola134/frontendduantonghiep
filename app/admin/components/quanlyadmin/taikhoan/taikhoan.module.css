@@ -1,0 +1,245 @@
+#content {
+  position: relative;
+  width: calc(100% - 260px);
+  left: 260px;
+  transition: all 0.3s ease;
+}
+.header1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  width: 98%;
+  border-left: 5px solid #ffcc00;
+  margin: 10px;
+  padding: 10px 10px 0px 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: auto;
+}
+.header1 .title {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.timestamp {
+  font-family: Arial, sans-serif;
+}
+
+.bg {
+  background-color: #ffffff;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: auto;
+}
+.sp {
+  background-color: #28a745;
+  /* Light green */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+.sp2 {
+  background-color: #ffc107;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.sp3 {
+  background-color: #17a2b8;
+
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.sp4 {
+  background-color: #007bff;
+
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.sp5 {
+  background-color: #28a745;
+
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.sp6 {
+  background-color: #dc3545;
+
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.sp7 {
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.tableContainer {
+  overflow-x: auto;
+}
+
+.tableControls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.search input[type="text"] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.search input[type="text"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.15rem rgba(74, 136, 230, 0.25);
+  outline: none;
+}
+.search label {
+  margin-right: 5px;
+}
+.productTable {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.productTable thead {
+  background-color: #f8f9fa;
+}
+
+.productTable th,
+.productTable td {
+  border: 1px solid #dee2e6;
+  padding: 8px;
+  text-align: left;
+  word-break: break-word;
+}
+.productTable td .mota {
+  max-height: 130px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+.productTable td .mota::-webkit-scrollbar {
+  width: 8px;
+}
+
+.productTable td .mota::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.productTable td .mota::-webkit-scrollbar-thumb {
+  background-color: #2222;
+  border-radius: 10px;
+  border: 2px solid #f1f1f1;
+}
+
+.productTable td .mota::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.productTable th {
+  background-color: #e9ecef;
+}
+
+.productTable img {
+  width: 100px;
+  height: auto;
+}
+.btn.delete {
+  background-color: #dc3545;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn.edit {
+  background-color: #ffc107;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0 0 0;
+}
+
+.paginationControls {
+  display: flex;
+  gap: 15px;
+}
+
+.paginationButton {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 5px 12px;
+  cursor: pointer;
+}
+
+.chucvu select {
+  margin-top: 15px;
+  background-color: #28a745;
+  border-radius: 6px;
+  border: 0.5px solid #28a745;
+  padding: 5px;
+  text-align: center;
+  color: white;
+  width: 160px;
+  direction: rtl;
+}

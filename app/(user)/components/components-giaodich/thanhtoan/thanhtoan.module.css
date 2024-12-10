@@ -1,0 +1,266 @@
+.container {
+  width: 1170px;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0px auto;
+}
+.checkoutContainer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 20px auto;
+  box-sizing: border-box;
+}
+
+.checkoutLeft {
+  flex: 2;
+  margin-right: 20px;
+  width: 70%;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.cartSummary {
+  width: 30%;
+  padding: 30px;
+  border-radius: 5px;
+  height: 350px;
+}
+
+.box {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+.productTitle {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.inputGroup {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.inputGroup input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.shippingPaymentInfo input,
+.shippingPaymentInfo textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.textarea {
+  height: 80px;
+  resize: none;
+}
+/* phương thức thanh toán */
+.paymentMethods {
+  margin: 20px 0;
+}
+
+.paymentSelect {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.paymentOption {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.paymentOption span {
+  font-size: 14px;
+}
+
+/* thông tin sản phẩm */
+.productCard {
+  max-width: 800px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productInfo {
+  display: flex;
+}
+
+.productLeft {
+  margin-right: 20px;
+}
+
+.productImage img {
+  width: 80px;
+  height: auto;
+}
+
+.productDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.productName {
+  font-weight: bold;
+  margin: 3px 0;
+  font-size: 14px;
+}
+
+.productModel,
+.productCode,
+.productSize .productSize {
+  margin: 3px 0;
+  font-size: 14px;
+}
+
+.productActions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.quantityPrice {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.quantityBtn {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 5px;
+  width: 30px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 50%;
+}
+
+.quantityInput {
+  border: none;
+  background: none;
+  width: 30px;
+  text-align: center;
+  font-size: 16px;
+  margin: 0 10px;
+  color: black;
+  outline: none;
+}
+
+.productPrice {
+  font-weight: bold;
+  color: red;
+  font-size: 16px;
+}
+
+.deleteBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: red;
+  margin-top: 10px;
+}
+
+/* Tổng đơn hàng */
+.discountCode {
+  margin-bottom: 20px;
+}
+
+.discountCode input {
+  width: 203px;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.discountCode hr {
+  width: 100%;
+}
+
+.discountCode button {
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+
+  margin-left: 15px;
+}
+
+.orderSummary {
+  margin-bottom: 20px;
+}
+
+.orderSummary p {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.orderSummary p span {
+  width: 25%;
+}
+
+.totalAmount {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.checkoutButton {
+  width: 100%;
+  padding: 15px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+/* Thông báo lỗi */
+.errorText {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+/* Hiển thị lỗi cho input */
+.checkoutLeft .inputError {
+  border-inline: 2px solid red;
+}

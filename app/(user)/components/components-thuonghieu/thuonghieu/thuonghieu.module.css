@@ -1,0 +1,91 @@
+.container {
+  width: 1170px;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.thuonghieu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thuonghieu img {
+  width: 100%;
+  height: 293px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.arrowLeft,
+.arrowRight {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  font-size: 36px;
+  color: #333;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 10%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.arrowLeft {
+  left: 174px;
+}
+
+.arrowRight {
+  right: 174px;
+}
+
+.arrowLeft:hover,
+.arrowRight:hover {
+  background: #333;
+  color: #fff;
+}
+
+.owl-carousel .owl-stage:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.owl-carousel .owl-controls .owl-nav .owl-prev,
+.owl-carousel .owl-controls .owl-nav .owl-next,
+.owl-carousel .owl-controls .owl-dot {
+  cursor: pointer;
+  user-select: none;
+}
+
+.owl-nav {
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.owl-nav:hover {
+  opacity: 1;
+}
+
+.owl-dot {
+  display: none;
+}

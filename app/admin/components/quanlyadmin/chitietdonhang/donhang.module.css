@@ -1,0 +1,244 @@
+#content {
+  position: relative;
+  width: calc(100% - 260px);
+  left: 260px;
+  transition: all 0.3s ease;
+}
+.header1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  width: 98%;
+  border-left: 5px solid #ffcc00;
+  margin: 10px;
+  padding: 10px 10px 0px 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: auto;
+}
+.header1 .title {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.timestamp {
+  font-family: Arial, sans-serif;
+}
+/*button*/
+.bg {
+  background-color: #ffffff;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: auto;
+}
+.sp {
+  background-color: #28a745;
+  /* Light green */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+.sp2 {
+  background-color: #ffc107;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.sp3 {
+  background-color: #17a2b8;
+  /* Light blue */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.sp4 {
+  background-color: #007bff;
+  /* Light primary blue */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.sp5 {
+  background-color: #28a745;
+  /* Dark green */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.sp6 {
+  background-color: #dc3545;
+  /* Light red */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.sp7 {
+  background-color: #6c757d;
+  /* Light grey */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.tableContainer {
+  overflow-x: auto;
+}
+
+.tableControls {
+  float: right;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.search {
+  display: flex;
+  align-items: center; /* Aligns input and button vertically */
+}
+
+.search input[type="text"] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-right: 5px; /* Adds space between the input and button */
+  flex: 1; /* Allows input to grow and take up available space */
+}
+
+.search input[type="text"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.15rem rgba(74, 136, 230, 0.25);
+  outline: none;
+}
+
+.search button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search button:hover {
+  background-color: #0056b3;
+}
+
+.search label {
+  margin-right: 5px;
+}
+
+.productTable {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  /* Ensure columns have equal width */
+}
+
+.productTable thead {
+  background-color: #f8f9fa;
+}
+
+.productTable th,
+.productTable td {
+  border: 1px solid #dee2e6;
+  padding: 8px;
+  text-align: left;
+  word-break: break-word;
+}
+
+.productTable th {
+  background-color: #e9ecef;
+}
+
+.productTable img {
+  width: 100px;
+  height: auto;
+}
+.btn.delete {
+  background-color: #dc3545;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn.edit {
+  background-color: #ffc107;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.paginationControls {
+  display: flex;
+  gap: 5px;
+}
+
+.paginationButton {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.paginationButton:hover {
+  background-color: #f0f0f0;
+}
+#loi{
+  background-color: #f5f6f8;
+}

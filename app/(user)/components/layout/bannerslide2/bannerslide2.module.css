@@ -1,0 +1,118 @@
+.slider-collection {
+  margin-bottom: 70px;
+  min-height: 420px;
+  overflow: hidden;
+  height: 480px;
+  margin: 0 auto;
+}
+.pav-slide-content {
+  position: relative;
+  max-width: 1170p;
+}
+.owl-controls div {
+  position: absolute;
+  margin-top: -60px;
+  margin-left: 82px;
+}
+.prev {
+  display: inline-block;
+  position: absolute;
+  padding-top: 4px;
+  border-radius: 5px;
+  opacity: 0.7;
+  width: 45px;
+  height: 38px;
+  text-align: center;
+  font-size: 34px;
+  color: #fff;
+  line-height: 38px;
+  transform: translateY(-50%);
+  transition: 0.5s;
+  clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%, 25% 0);
+  background: rgba(0, 0, 0, 0.44);
+  z-index: 999;
+  padding: auto;
+  cursor: pointer;
+}
+.next {
+  display: inline-block;
+  position: absolute;
+  padding-top: 4px;
+  left: 50px;
+  border-radius: 5px;
+  opacity: 0.7;
+  width: 45px;
+  height: 38px;
+  text-align: center;
+  font-size: 34px;
+  color: #fff;
+  line-height: 38px;
+  transform: translateY(-50%);
+  transition: 0.5s;
+  clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%, 25% 0);
+  background: rgba(0, 0, 0, 0.44);
+  z-index: 999;
+  padding: auto;
+  cursor: pointer;
+}
+
+.item {
+  position: relative;
+}
+.sl-content {
+  position: absolute;
+  left: 11%;
+  top: 100px;
+  z-index: 99;
+}
+.title-banner-big {
+  font-weight: bold;
+  font-size: 60px;
+  margin-bottom: 25px;
+}
+.type {
+  font-size: 20px;
+  color: #796752;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.description-slide {
+  max-width: 340px;
+}
+.read_more {
+  position: absolute;
+  left: 11%;
+  top: 260px;
+  z-index: 99;
+  border: 1px solid #796752;
+  border-radius: 20px;
+  width: 240px;
+  height: 40px;
+  background-color: #796752;
+  font-size: 22px;
+}
+.read_more a {
+  color: #fff;
+  padding-top: 12px;
+  padding-left: 33px;
+}
+.image-product {
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  animation: slideUp 3s ease forwards;
+  width: 200px;
+  height: 360px;
+}
+@keyframes slideUp {
+  0% {
+    bottom: -100px;
+    opacity: 0;
+  }
+  100% {
+    bottom: 13%;
+    opacity: 1;
+  }
+}

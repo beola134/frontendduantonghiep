@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 14px / 18px Helvetica, Arial, "DejaVu Sans", "Liberation Sans", Freesans,
+    sans-serif;
+}
+
+.container {
+  width: 1170px;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0px auto;
+}
+a {
+  color: #000;
+  text-decoration: none;
+  display: inline-block;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+}
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+  font-family: inherit;
+  font-size: 14px;
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+  height: auto;
+  transition: all 5s ease;
+  display: inline-block;
+
+  
+}
+figure {
+  margin: 0;
+}
+strong,
+b {
+  font-weight: 700;
+}
+li {
+  list-style: none;
+}
+table {
+  font-size: inherit;
+  border-collapse: collapse;
+}
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+  border-color: inherit;
+}
+i {
+  font-style: italic;
+}
+
+#fixedBar {
+  margin: 0;
+  padding: 0;
+  z-index: 100;
+  right: 0;
+  display: none;
+}
+#fixedBar #barInner button {
+  background: #8d7a66bf;
+  display: block;
+  text-decoration: none;
+  -moz-transition: all 0.2s ease-in 0;
+  -webkit-transition: all 0.2s ease-in;
+  -webkit-transition-delay: 0;
+  transition: all 0.2s ease-in 0;
+  width: 42px;
+  height: 42px;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 42px;
+  margin-right: 8px;
+  border: none;
+  cursor: pointer;
+}
+#fixedBar #barInner i {
+  color: #fff;
+  font-size: 20px;
+}
+
+#boxContentLinfo {
+  transition: height 75ms;
+  overflow: hidden;
+}
+#readmore-desc {
+  text-align: center;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 28px;
+  font-size: 15px;
+}
+#readmore-desc span {
+  text-align: center;
+  color: #fff;
+  background: #3f82e6;
+  padding: 10px 60px 10px 40px;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  display: inline-block;
+  border: 1px solid #e9e9e98a;
+}
+#readmore-desc span::before {
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #fff;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  right: 27px;
+  top: 15px;
+  vertical-align: top;
+  content: "";
+  border-radius: 3px;
+}
+#readmore-desc span::after {
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #fff;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  right: 27px;
+  top: 12px;
+  vertical-align: top;
+  content: "";
+}

@@ -1,0 +1,141 @@
+.search-results {
+  background-color: #ffffff;
+  border-radius: 4px;
+  overflow-y: auto;
+  max-width: 1170px;
+  margin: 30px auto;
+ overflow: hidden; 
+}
+
+.search-results ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.search-results h2{
+  text-align: center;
+  margin-bottom: 60px;
+  margin-top: 60px;
+  text-transform: uppercase;
+  font-size: 24px;
+}
+
+
+.search-results p {
+  padding-bottom: 5px;
+  text-align: center;
+  color: #888;
+}
+.dongho-list {
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(5, 227px);
+  gap: 8px;
+  margin: 0px auto;
+  row-gap: 30px;
+ 
+}
+.watch {
+  padding-left: 30px;
+  text-align: center;
+  position: relative; 
+  width: 200px;
+}
+
+.watch img {
+  position: relative;
+
+  transition: transform 0.5s ease-in-out; 
+  z-index: 1;
+  margin: 0 auto;
+}
+.watch img:hover {
+  transform: scale(1.05); 
+}
+
+.watch p {
+  color: #000;
+  text-decoration: none; 
+  transition: color 0.3s ease, text-decoration 0.3s ease; 
+  text-align: center; 
+}
+.watch p small{
+  color:#777777;
+}
+.priceKm {
+  font-weight: bold;
+  color: red;
+}
+.discountBadge {
+  position: absolute;
+  top: -15px; 
+  left: 10px; 
+  background-color: red; 
+  color: white; 
+  padding: 5px 5px; 
+  border-radius: 50%; 
+  font-size: 10px; 
+  font-weight: bold; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  z-index: 9;
+}
+/* phân trang */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.pagination span,
+.pagination a {
+  display: inline-block;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #333;
+  cursor: pointer;
+}
+
+.pagination span.disabled {
+  color: #999;
+  border-color: #eee;
+  cursor: not-allowed;
+}
+
+.pagination a:hover {
+  background-color: #f0f0f0;
+  border-color: #bbb;
+}
+
+.pagination .current {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.pagination .other-page {
+  background-color: #fff;
+}
+
+.pagination .other-page:hover {
+  background-color: #e6e6e6;
+}
+
+.pagination .next-page,
+.pagination .last-page,
+.pagination .prev-page,
+.pagination .first-page {
+  font-weight: bold;
+}
+
+.pagination b {
+  padding: 10px 5px;
+  font-size: 16px;
+}

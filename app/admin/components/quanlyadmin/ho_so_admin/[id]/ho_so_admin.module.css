@@ -1,0 +1,328 @@
+.container {
+  width: 1170px;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #f5f5f5;
+  padding: 15px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 10px 0;
+  color: #333;
+  font-size: 16px;
+}
+
+.sidebar ul li strong {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.profileContent {
+  flex-grow: 1;
+  justify-content: center;
+  width: 200px;
+}
+
+.profileContent h2 {
+  color: #333;
+}
+
+.profileContent p {
+  color: #777;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+}
+
+.formGroup label {
+  margin-left: 25%;
+  display: block;
+  font-weight: bold;
+  color: #555;
+}
+
+.formGroup input[type="text"] {
+  margin-left: 25%;
+  width: 50%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.formGroup input[type="file"] {
+  margin-left: 25%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 4px;
+}
+.formGroup input[type="radio"] {
+  margin-right: 5px;
+}
+
+.submitButton {
+  padding: 10px 15px;
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  background-color: #e64a19;
+}
+
+.profilePicture {
+  text-align: center;
+}
+
+.profilePicture img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.pro button {
+  margin-left: 25%;
+  padding: 8px 10px;
+  background-color: #19a2ec;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pro button:hover {
+  background-color: #1172ce;
+}
+
+.profilePicture p {
+  color: #777;
+  font-size: 12px;
+}
+.Menu p {
+  padding: 10px;
+  margin-top: 5px;
+}
+.orderShow {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.orderShow h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.orderShow ul {
+  list-style-type: none;
+
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr); */
+
+  padding: 0;
+}
+
+.orderShow li {
+  background-color: #fff;
+
+  margin: 10px 5px;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  transition: box-shadow 0.3s;
+}
+
+.orderShow li:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.orderShow p {
+  margin: 5px 0;
+  color: #555;
+}
+.orderShow .trh {
+  color: red;
+  margin: 5px 5px;
+}
+
+.ShowLichsu {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ShowLichsu h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.ShowLichsu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.ShowLichsu li {
+  background-color: #fff;
+  margin: 10px 5px;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  transition: box-shadow 0.3s;
+}
+
+.ShowLichsu li:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.orderHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.productCard {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.productImage {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.productInfo {
+  flex: 1;
+}
+
+.productName {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.orderSummary {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 10px;
+}
+
+.orderSummary p {
+  font-weight: 500;
+  color: #555;
+}
+
+.summaryValue {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+
+.changePassword {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.changePassword h2 {
+  font-size: 24px;
+  color: #4caf50;
+  border-bottom: 2px solid #4caf50;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.formGroup input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.formGroup input[type="password"]:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+  outline: none;
+}
+.btnps button {
+  width: 100%;
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.btnps button:hover {
+  background-color: #45a049;
+}
+
+.btnps button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.orderTable {
+  width: 850px;
+  height: auto;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.orderTable th,
+.orderTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+.orderTable th {
+  background-color: #f2f2f2;
+}
+.cancel {
+  display: flex;
+  justify-content: space-between;
+}
+.cancel button {
+  width: 120px;
+  border-radius: 5px;
+  background-color: #393e39;
+  color: #ffffff;
+}
+.cancel button:hover {
+  cursor: pointer;
+  background-color: #4caf50;
+}

@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font: 14px / 18px Helvetica, Arial, "DejaVu Sans", "Liberation Sans", Freesans, sans-serif;
+  }
+  
+  .container {
+    width: 1170px;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0px auto;
+  }
+  
+  .thuonghieu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 sản phẩm trên 1 hàng */
+    gap: 20px; /* khoảng cách giữa các sản phẩm */
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  
+  .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .thuonghieu img {
+    width: 100%;
+    height: 293px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+  }
+  
+  .owl-carousel .owl-stage:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+  }
+  .owl-carousel .owl-controls .owl-nav .owl-prev,
+  .owl-carousel .owl-controls .owl-nav .owl-next,
+  .owl-carousel .owl-controls .owl-dot {
+    cursor: pointer;
+    user-select: none;
+  }
+  .thuonghieu .owl-nav{
+    opacity: 0.1;
+  }
+  .thuonghieu .owl-prev {
+    left:11%;
+  }
+  .thuonghieu .owl-next {
+    right: 11%;
+  }
+ .thuonghieu .owl-nav:hover{
+    opacity: 1;
+    cursor: pointer;
+ }
+  .thuonghieu .owl-next,
+  .thuonghieu .owl-prev {
+    position: absolute;
+    font-size: 36px;
+    text-align: center;
+    color: #333;
+    transition: all 0.3s ease;
+    background: #d2d2d2;
+    border: none;
+    top: 27%;
+    width: 35px;
+    height: 45px;
+    line-height: 38px;
+    border-radius: 5px;
+   }
+  
+  
+  

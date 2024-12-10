@@ -1,0 +1,87 @@
+/*content*/
+  #content {
+    position: relative;
+    width: calc(100% - 260px);
+    left: 260px;
+    transition: all 0.3s ease;
+  }
+  
+  #sidebar.hide + #content {
+    width: calc(100% - 60px);
+    left: 60px;
+  }
+  .header1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    width: 98%;
+    border-left: 5px solid #ffcc00;
+    margin: 10px;
+    padding: 10px 10px 0px 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: auto;
+  }
+  .header1 .title {
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .timestamp {
+    font-family: Arial, sans-serif;
+  }
+  .bg {
+    background-color: #ffffff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: auto;
+}
+  /*form*/
+  .container1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.container1>.formGroup:last-of-type {
+    grid-column: 1 / -1;
+}
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.formGroup label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: rgba(248, 246, 246, 0.712);
+}
+.btn.delete {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn.edit {
+    background-color: #ffc107;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
