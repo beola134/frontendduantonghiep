@@ -315,7 +315,7 @@ export default function DonHang() {
   useEffect(() => {
     const fetchDonhang = async () => {
       try {
-        const response = await fetch("http://localhost:5000/donhang/showAll");
+        const response = await fetch("https://backendduantotnhiep-c9935d34944c.herokuapp.com/donhang/showAll");
         if (!response.ok) {
           throw new Error("Lỗi không thể tải dữ liệu");
         }
@@ -326,7 +326,7 @@ export default function DonHang() {
 
         const nguoiDungData = await Promise.all(
           idNguoiDungList.map(async (id) => {
-            const res = await fetch(`http://localhost:5000/users/${id}`);
+            const res = await fetch(`https://backendduantotnhiep-c9935d34944c.herokuapp.com/users/${id}`);
             const userData = await res.json();
             return { id, ...userData.user };
           })
@@ -359,7 +359,7 @@ export default function DonHang() {
       if (result.isConfirmed) {
         try {
           // Gửi yêu cầu PUT đến API
-          const response = await fetch(`http://localhost:5000/donhang/update/${id}`, {
+          const response = await fetch(`https://backendduantotnhiep-c9935d34944c.herokuapp.com/donhang/update/${id}`, {
             method: "PUT",
             headers: {
               "Content-Type": "application/json",

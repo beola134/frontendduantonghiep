@@ -13,7 +13,7 @@ export default function Thuonghieu() {
     const fetchCates = async () => {
       try {
         const res = await fetch(
-          "http://localhost:5000/thuonghieu/allthuonghieu"
+          "https://backendduantotnhiep-c9935d34944c.herokuapp.com/thuonghieu/allthuonghieu"
         );
         const data = await res.json();
         setCates(data.th);
@@ -64,7 +64,7 @@ export default function Thuonghieu() {
                       href={`/components/components-thuonghieu/chitietthuonghieu/${item.thuong_hieu}`}
                     >
                       <img
-                        src={`http://localhost:5000/images/${hinh_anh2}`}
+                        src={`https://backendduantotnhiep-c9935d34944c.herokuapp.com/images/${hinh_anh2}`}
                         alt={`Hình ảnh thương hiệu ${item.thuong_hieu}`}
                       />
                     </Link>
@@ -86,7 +86,7 @@ export default function Thuonghieu() {
               <div className={styles.item} key={_id}>
                 <Link href={`/components/components-thuonghieu/chitietthuonghieu/${item.thuong_hieu}`}>
                   <img
-                    src={`http://localhost:5000/images/${hinh_anh2}`}
+                    src={`https://backendduantotnhiep-c9935d34944c.herokuapp.com/images/${hinh_anh2}`}
                     alt={`Hình ảnh thương hiệu ${item.thuong_hieu}`}
                   />
                 </Link>

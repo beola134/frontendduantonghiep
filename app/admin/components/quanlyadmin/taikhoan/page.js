@@ -51,7 +51,7 @@ export default function TaiKhoan() {
   //cập nhật quyền người dùng
   const handleRoleChange = async (id, newRole) => {
     try {
-      const response = await fetch(`http://localhost:5000/users/update/${id}`, {
+      const response = await fetch(`https://backendduantotnhiep-c9935d34944c.herokuapp.com/users/update/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ quyen: newRole }),
@@ -308,7 +308,7 @@ const exportToPDF = () => {
 
     if (result.isConfirmed) {
       try {
-        const response = await fetch(`http://localhost:5000/users/delete/${id}`, {
+        const response = await fetch(`https://backendduantotnhiep-c9935d34944c.herokuapp.com/users/delete/${id}`, {
           method: "DELETE",
         });
         if (!response.ok) {
@@ -337,7 +337,7 @@ const exportToPDF = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await fetch("http://localhost:5000/users");
+        const response = await fetch("https://backendduantotnhiep-c9935d34944c.herokuapp.com/users");
         if (!response.ok) {
           throw new Error("Lỗi không thể tải dữ liệu");
         }
@@ -425,7 +425,7 @@ const exportToPDF = () => {
                           <p className={styles.mota}>{item.ho_ten}</p>
                         </td>
                         <td style={{ textAlign: "center" }}>
-                          <img src={`http://localhost:5000/images/${item.hinh_anh}`} alt={item.danh_muc} />
+                          <img src={`https://backendduantotnhiep-c9935d34944c.herokuapp.com/images/${item.hinh_anh}`} alt={item.danh_muc} />
                         </td>
                         <td style={{ textAlign: "center" }}>{item.dia_chi}</td>
                         <td style={{ textAlign: "center" }}> {item.email}</td>

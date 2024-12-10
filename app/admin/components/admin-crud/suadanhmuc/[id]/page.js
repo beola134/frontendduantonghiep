@@ -21,7 +21,7 @@ export default function SuaDanhmuc() {
     const fetchDanhmuc = async () => {
       try {
         const response = await fetch(
-          `http://localhost:5000/cate/allcate/${id}`
+          `https://backendduantotnhiep-c9935d34944c.herokuapp.com/cate/allcate/${id}`
         );
         if (response.ok) {
           const data = await response.json();
@@ -68,7 +68,7 @@ export default function SuaDanhmuc() {
     }
 
     try {
-      const res = await fetch(`http://localhost:5000/cate/updatecate/${id}`, {
+      const res = await fetch(`https://backendduantotnhiep-c9935d34944c.herokuapp.com/cate/updatecate/${id}`, {
         method: "PUT",
         body: formData,
       });
@@ -138,7 +138,7 @@ export default function SuaDanhmuc() {
                     justifyContent: "space-between",
                   }}>
                   <img
-                    src={`http://localhost:5000/images/${danhmuc.hinh_anh}`}
+                    src={`https://backendduantotnhiep-c9935d34944c.herokuapp.com/images/${danhmuc.hinh_anh}`}
                     style={{ width: "80px" }}
                   />
                   <input

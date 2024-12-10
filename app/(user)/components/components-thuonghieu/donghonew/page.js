@@ -56,7 +56,7 @@ export default function DonghoNam() {
         setLoading(true);
         try {
           const response = await fetch(
-            `http://localhost:5000/product/filtersanphamdongho?${query}`,
+            `https://backendduantotnhiep-c9935d34944c.herokuapp.com/product/filtersanphamdongho?${query}`,
             {
               method: "GET",
               headers: {
@@ -94,7 +94,7 @@ export default function DonghoNam() {
     try {
       const queryParams = new URLSearchParams({ ...filter, page: currentPage });
       const response = await fetch(
-        `http://localhost:5000/product/filtersanphamdongho?${queryParams}`
+        `https://backendduantotnhiep-c9935d34944c.herokuapp.com/product/filtersanphamdongho?${queryParams}`
       );
       if (!response.ok) {
         throw new Error("Lỗi không thể tải dữ liệu");
@@ -2046,7 +2046,7 @@ export default function DonghoNam() {
                                     href={`/components/product-detail/${_id}`}
                                   >
                                     <img
-                                      src={`http://localhost:5000/images/${hinh_anh}`}
+                                      src={`https://backendduantotnhiep-c9935d34944c.herokuapp.com/images/${hinh_anh}`}
                                       alt={ten}
                                       width="300"
                                       height="363"

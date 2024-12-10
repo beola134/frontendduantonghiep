@@ -123,7 +123,7 @@ export default function DanhMuc() {
                 mo_ta: item.mo_ta,
                 hinh_anh: "",
               });
-              const response = await fetch(`http://localhost:5000/images/${item.hinh_anh2}`);
+              const response = await fetch(`https://backendduantotnhiep-c9935d34944c.herokuapp.com/images/${item.hinh_anh2}`);
               if (!response.ok) {
                 throw new Error(`Không thể tải ảnh từ URL: ${item.hinh_anh2}`);
               }
@@ -214,7 +214,7 @@ export default function DanhMuc() {
     const imageCache = {};
     for (const item of categories) {
       if (item.hinh_anh2) {
-        const imageUrl = `http://localhost:5000/images/${item.hinh_anh2}`;
+        const imageUrl = `https://backendduantotnhiep-c9935d34944c.herokuapp.com/images/${item.hinh_anh2}`;
         try {
           const base64Image = await getBase64ImageFromURL(imageUrl);
           imageCache[item.hinh_anh2] = base64Image;
@@ -310,7 +310,7 @@ export default function DanhMuc() {
 
     if (result.isConfirmed) {
       try {
-        const response = await fetch(`http://localhost:5000/thuonghieu/delete/${id}`, {
+        const response = await fetch(`https://backendduantotnhiep-c9935d34944c.herokuapp.com/thuonghieu/delete/${id}`, {
           method: "DELETE",
         });
         if (!response.ok) {
@@ -340,7 +340,7 @@ export default function DanhMuc() {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch("http://localhost:5000/thuonghieu/allthuonghieu");
+        const response = await fetch("https://backendduantotnhiep-c9935d34944c.herokuapp.com/thuonghieu/allthuonghieu");
         if (!response.ok) {
           throw new Error("Lỗi không thể tải dữ liệu");
         }
@@ -433,7 +433,7 @@ export default function DanhMuc() {
                         </td>
                         <td style={{ textAlign: "center" }}>{item.thuong_hieu}</td>
                         <td style={{ textAlign: "center" }}>
-                          <img src={`http://localhost:5000/images/${item.hinh_anh2}`} alt={item.thuong_hieu} />
+                          <img src={`https://backendduantotnhiep-c9935d34944c.herokuapp.com/images/${item.hinh_anh2}`} alt={item.thuong_hieu} />
                         </td>
                         <td style={{ textAlign: "center" }}>
                           <Link

@@ -30,7 +30,7 @@ export default function Search() {
       const fetchData = async () => {
         try {
           const response = await fetch(
-            "http://localhost:5000/product/timkiem",
+            "https://backendduantotnhiep-c9935d34944c.herokuapp.com/product/timkiem",
             {
               method: "POST",
               headers: {
@@ -85,7 +85,7 @@ export default function Search() {
                 </div>
                 <Link href={`/components/product-detail/${item._id}`}>
                   <img
-                    src={`http://localhost:5000/images/${item.hinh_anh}`}
+                    src={`https://backendduantotnhiep-c9935d34944c.herokuapp.com/images/${item.hinh_anh}`}
                     alt={item.ten_san_pham}
                   />
                 </Link>

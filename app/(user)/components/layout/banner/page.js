@@ -35,7 +35,7 @@ export default function Banner() {
   const [thuongHieu, setThuonghieu] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("http://localhost:5000/thuonghieu/allthuonghieu");
+      const response = await fetch("https://backendduantotnhiep-c9935d34944c.herokuapp.com/thuonghieu/allthuonghieu");
       const data = await response.json();
       setThuonghieu(data.th);
     };
@@ -112,7 +112,7 @@ export default function Banner() {
                  <Link href={`/components/chitietdanhmuc/${item.thuong_hieu}`}>
                 <div className={cx("item")} key={item._id}>
                  
-                    <img src={`http://localhost:5000/images/${item.hinh_anh}`} alt={item.thuong_hieu} style={{ objectFit: "cover", width: "100%", height: "100%" }} />
+                    <img src={`https://backendduantotnhiep-c9935d34944c.herokuapp.com/images/${item.hinh_anh}`} alt={item.thuong_hieu} style={{ objectFit: "cover", width: "100%", height: "100%" }} />
                   
                 </div></Link>
               ))}

@@ -39,13 +39,13 @@ export default function SuaSanPham({ params }) {
     const fetchProductAndCategories = async () => {
       try {
         const cateResponse = await fetch(
-          "http://localhost:5000/thuonghieu/allthuonghieu"
+          "https://backendduantotnhiep-c9935d34944c.herokuapp.com/thuonghieu/allthuonghieu"
         );
         const cateData = await cateResponse.json();
         setCategories(cateData.th);
 
         const productResponse = await fetch(
-          `http://localhost:5000/product/chitietsp/${id}`
+          `https://backendduantotnhiep-c9935d34944c.herokuapp.com/product/chitietsp/${id}`
         );
         const productData = await productResponse.json();
         setFormData({ ...productData.product });
@@ -95,7 +95,7 @@ export default function SuaSanPham({ params }) {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/product/capnhatsp/${id}`,
+        `https://backendduantotnhiep-c9935d34944c.herokuapp.com/product/capnhatsp/${id}`,
         {
           method: "PUT",
           body: data,

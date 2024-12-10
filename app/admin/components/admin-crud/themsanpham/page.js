@@ -40,7 +40,7 @@ export default function ThemSanPham() {
     const fetchCategories = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5000/thuonghieu/allthuonghieu"
+          "https://backendduantotnhiep-c9935d34944c.herokuapp.com/thuonghieu/allthuonghieu"
         );
         const data = await response.json();
         setCategories(data.th);
@@ -131,7 +131,7 @@ export default function ThemSanPham() {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/product/themsp", {
+      const response = await fetch("https://backendduantotnhiep-c9935d34944c.herokuapp.com/product/themsp", {
         method: "POST",
         body: data,
         headers: {

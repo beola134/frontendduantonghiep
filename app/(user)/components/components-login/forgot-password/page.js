@@ -45,7 +45,7 @@ export default function ForgotPassword() {
     onSubmit: async (values, { setFieldError }) => {
       setLoading(true);
       try {
-        const res = await fetch("http://localhost:5000/users/resetPasswordByOTP", {
+        const res = await fetch("https://backendduantotnhiep-c9935d34944c.herokuapp.com/users/resetPasswordByOTP", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -89,7 +89,7 @@ export default function ForgotPassword() {
   const handleSendOtp = async () => {
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5000/users/sendOTPquenmk", {
+      const res = await fetch("https://backendduantotnhiep-c9935d34944c.herokuapp.com/users/sendOTPquenmk", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

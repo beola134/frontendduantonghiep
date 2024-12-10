@@ -73,7 +73,7 @@ export default function ThemVoucher() {
     };
 
     try {
-      const response = await fetch("http://localhost:5000/voucher", {
+      const response = await fetch("https://backendduantotnhiep-c9935d34944c.herokuapp.com/voucher", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -37,7 +37,7 @@ const CartPage = () => {
 
   const ktra = async (items, newQuantity) => {
     const reponse = await fetch(
-      `http://localhost:5000/product/check/${items._id}?quantity=${newQuantity}`
+      `https://backendduantotnhiep-c9935d34944c.herokuapp.com/product/check/${items._id}?quantity=${newQuantity}`
     );
     const data = await reponse.json();
     if (!reponse.ok) {
@@ -115,7 +115,7 @@ const CartPage = () => {
                       <tr key={item._id}>
                         <td>
                           <img
-                            src={`http://localhost:5000/images/${item.hinh_anh}`}
+                            src={`https://backendduantotnhiep-c9935d34944c.herokuapp.com/images/${item.hinh_anh}`}
                             alt=""
                             width="100px"
                           />

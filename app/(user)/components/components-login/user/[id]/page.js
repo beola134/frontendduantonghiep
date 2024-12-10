@@ -50,7 +50,7 @@ const User = ({ params }) => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/users/${id}`);
+        const res = await fetch(`https://backendduantotnhiep-c9935d34944c.herokuapp.com/users/${id}`);
         const data = await res.json();
         setUserData(data.user);
       } catch (error) {
@@ -64,7 +64,7 @@ const User = ({ params }) => {
     if (activeTab === "orderShow") {
       const fetchOrderShow = async () => {
         try {
-          const res = await fetch(`http://localhost:5000/donhang/show/${id}`);
+          const res = await fetch(`https://backendduantotnhiep-c9935d34944c.herokuapp.com/donhang/show/${id}`);
           const data = await res.json();
           if (data.orders && Array.isArray(data.orders)) {
             setOrderShow(data.orders);
@@ -82,7 +82,7 @@ const User = ({ params }) => {
 
   const fetchShowLichsu = async () => {
     try {
-      const res = await fetch(`http://localhost:5000/donhang/history/${id}`);
+      const res = await fetch(`https://backendduantotnhiep-c9935d34944c.herokuapp.com/donhang/history/${id}`);
       const data = await res.json();
       if (data.donHangs && Array.isArray(data.donHangs)) {
         setShowLichsu(data.donHangs);
@@ -102,7 +102,7 @@ const User = ({ params }) => {
   }, [activeTab, id]);
   const fetchOrderShow = async () => {
     try {
-      const res = await fetch(`http://localhost:5000/donhang/show/${id}`);
+      const res = await fetch(`https://backendduantotnhiep-c9935d34944c.herokuapp.com/donhang/show/${id}`);
       const data = await res.json();
       if (data.orders && Array.isArray(data.orders)) {
         setOrderShow(data.orders);
@@ -148,7 +148,7 @@ const User = ({ params }) => {
       formData.append("hinh_anh", avatarFile);
     }
     try {
-      const res = await fetch(`http://localhost:5000/users/update/${id}`, {
+      const res = await fetch(`https://backendduantotnhiep-c9935d34944c.herokuapp.com/users/update/${id}`, {
         method: "PUT",
         body: formData,
       });
@@ -203,7 +203,7 @@ const User = ({ params }) => {
       return;
     }
     try {
-      const res = await fetch(`http://localhost:5000/users/changepassword`, {
+      const res = await fetch(`https://backendduantotnhiep-c9935d34944c.herokuapp.com/users/changepassword`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -282,7 +282,7 @@ const User = ({ params }) => {
       if (result.isConfirmed) {
         try {
           const response = await fetch(
-            `http://localhost:5000/donhang/update/${id}`,
+            `https://backendduantotnhiep-c9935d34944c.herokuapp.com/donhang/update/${id}`,
             {
               method: "PUT",
               headers: {
@@ -323,7 +323,7 @@ const User = ({ params }) => {
             src={
               userData.hinh_anh.startsWith("http")
                 ? userData.hinh_anh
-                : `http://localhost:5000/images/${userData.hinh_anh}`
+                : `https://backendduantotnhiep-c9935d34944c.herokuapp.com/images/${userData.hinh_anh}`
             }
             width="300"
             height="363"
@@ -495,7 +495,7 @@ const User = ({ params }) => {
                     {order.chiTietDonHangs.map((detail) => (
                       <div key={detail._id} className={styles.productCard}>
                         <img
-                          src={`http://localhost:5000/images/${detail.product.hinh_anh}`}
+                          src={`https://backendduantotnhiep-c9935d34944c.herokuapp.com/images/${detail.product.hinh_anh}`}
                           alt={detail.product.ten}
                           className={styles.productImage}
                         />
@@ -571,7 +571,7 @@ const User = ({ params }) => {
                             <td>{detail.product.ten}</td>
                             <td>
                               <img
-                                src={`http://localhost:5000/images/${detail.product.hinh_anh}`}
+                                src={`https://backendduantotnhiep-c9935d34944c.herokuapp.com/images/${detail.product.hinh_anh}`}
                                 alt={detail.gia_giam}
                                 style={{ width: "50px", height: "auto" }}
                               />

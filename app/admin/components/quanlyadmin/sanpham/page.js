@@ -38,7 +38,7 @@ export default function SanPham() {
           let totalPages = 1;
           const allProducts = [];
           while (currentPage <= totalPages) {
-            const response = await fetch(`http://localhost:5000/product/allsp?page=${currentPage}`);
+            const response = await fetch(`https://backendduantotnhiep-c9935d34944c.herokuapp.com/product/allsp?page=${currentPage}`);
             const data = await response.json();
             allProducts.push(...data.products);
             totalPages = data.totalPage;
@@ -76,7 +76,7 @@ export default function SanPham() {
                 hinh_anh: "",
               });
               if (item.hinh_anh) {
-                const response = await fetch(`http://localhost:5000/images/${item.hinh_anh}`);
+                const response = await fetch(`https://backendduantotnhiep-c9935d34944c.herokuapp.com/images/${item.hinh_anh}`);
                 if (!response.ok) {
                   throw new Error(`Không thể tải ảnh từ URL: ${item.hinh_anh}`);
                 }
@@ -149,7 +149,7 @@ export default function SanPham() {
       let totalPages = 1;
       const allProducts = [];
       while (currentPage <= totalPages) {
-        const response = await fetch(`http://localhost:5000/product/allsp?page=${currentPage}`);
+        const response = await fetch(`https://backendduantotnhiep-c9935d34944c.herokuapp.com/product/allsp?page=${currentPage}`);
         if (!response.ok) {
           throw new Error(`Failed to fetch page ${currentPage}: ${response.statusText}`);
         }
@@ -164,7 +164,7 @@ export default function SanPham() {
       const images = await Promise.all(
         sortedProducts.map((item) => {
           if (item.hinh_anh) {
-            const imageUrl = `http://localhost:5000/images/${item.hinh_anh}`;
+            const imageUrl = `https://backendduantotnhiep-c9935d34944c.herokuapp.com/images/${item.hinh_anh}`;
             return new Promise((resolve) => {
               const img = new Image();
               img.crossOrigin = "Anonymous";
@@ -282,7 +282,7 @@ export default function SanPham() {
     setLoading(true);
     try {
       const response = await fetch(
-        `http://localhost:5000/product/allsp?page=${currentPage}&ten_san_pham=${searchQuery}`
+        `https://backendduantotnhiep-c9935d34944c.herokuapp.com/product/allsp?page=${currentPage}&ten_san_pham=${searchQuery}`
       );
       if (!response.ok) {
         throw new Error("Lỗi không thể tải dữ liệu");
@@ -319,7 +319,7 @@ export default function SanPham() {
     });
     if (result.isConfirmed) {
       try {
-        const response = await fetch(`http://localhost:5000/product/xoasp/${id}`, { method: "DELETE" });
+        const response = await fetch(`https://backendduantotnhiep-c9935d34944c.herokuapp.com/product/xoasp/${id}`, { method: "DELETE" });
         if (!response.ok) {
           throw new Error("Lỗi khi xóa sản phẩm");
         }
@@ -409,7 +409,7 @@ export default function SanPham() {
                       <td>{_id}</td>
                       <td>{ten_san_pham}</td>
                       <td>
-                        <img src={`http://localhost:5000/images/${hinh_anh}`} alt="Sản phẩm" />
+                        <img src={`https://backendduantotnhiep-c9935d34944c.herokuapp.com/images/${hinh_anh}`} alt="Sản phẩm" />
                       </td>
                       <td style={{ textAlign: "center" }}>{so_luong}</td>
                       <td style={{ textAlign: "center" }}>{gia_san_pham.toLocaleString("vi-VN")}₫</td>

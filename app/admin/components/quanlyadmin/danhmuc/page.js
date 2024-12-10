@@ -33,7 +33,7 @@ export default function DanhmucPage() {
   const fetchDanhmuc = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/cate/allcate?page=${currentPage}&ten_danh_muc=${searchQuery}`
+        `https://backendduantotnhiep-c9935d34944c.herokuapp.com/cate/allcate?page=${currentPage}&ten_danh_muc=${searchQuery}`
       );
       if (!response.ok) {
         throw new Error("Lỗi không thể tải dữ liệu");
@@ -78,7 +78,7 @@ export default function DanhmucPage() {
     });
     try {
       const response = await fetch(
-        `http://localhost:5000/cate/deletecate/${id}`,
+        `https://backendduantotnhiep-c9935d34944c.herokuapp.com/cate/deletecate/${id}`,
         {
           method: "DELETE",
         }
@@ -132,7 +132,7 @@ export default function DanhmucPage() {
           const allCates = [];
           while (currentPage <= totalPages) {
             const response = await fetch(
-              `http://localhost:5000/cate/allcate?page=${currentPage}`
+              `https://backendduantotnhiep-c9935d34944c.herokuapp.com/cate/allcate?page=${currentPage}`
             );
             const data = await response.json();
             allCates.push(...data.cates);
@@ -165,7 +165,7 @@ export default function DanhmucPage() {
                 hinh_anh: "",
               });
               const response = await fetch(
-                `http://localhost:5000/images/${item.hinh_anh}`
+                `https://backendduantotnhiep-c9935d34944c.herokuapp.com/images/${item.hinh_anh}`
               );
               if (!response.ok) {
                 throw new Error(`Không thể tải ảnh từ URL: ${item.hinh_anh}`);
@@ -245,7 +245,7 @@ export default function DanhmucPage() {
       // Fetch all pages
       while (currentPage <= totalPages) {
         const response = await fetch(
-          `http://localhost:5000/cate/allcate?page=${currentPage}`
+          `https://backendduantotnhiep-c9935d34944c.herokuapp.com/cate/allcate?page=${currentPage}`
         );
         if (!response.ok) {
           throw new Error(
@@ -266,7 +266,7 @@ export default function DanhmucPage() {
       const images = await Promise.all(
         sortedCates.map((item) => {
           if (item.hinh_anh) {
-            const imageUrl = `http://localhost:5000/images/${item.hinh_anh}`;
+            const imageUrl = `https://backendduantotnhiep-c9935d34944c.herokuapp.com/images/${item.hinh_anh}`;
             return new Promise((resolve) => {
               const img = new Image();
               img.crossOrigin = "Anonymous";
@@ -466,7 +466,7 @@ export default function DanhmucPage() {
                       <td>{_id}</td>
                       <td style={{ textAlign: "center" }}>{ten_danh_muc}</td>
                       <td style={{ width: "10%", textAlign: "center" }}>
-                        <img src={`http://localhost:5000/images/${hinh_anh}`} />
+                        <img src={`https://backendduantotnhiep-c9935d34944c.herokuapp.com/images/${hinh_anh}`} />
                       </td>
                       <td style={{ textAlign: "center" }}>
                         <p className={styles.mota}>{mo_ta}</p>

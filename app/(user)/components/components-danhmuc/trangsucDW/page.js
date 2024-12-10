@@ -35,7 +35,7 @@ export default function TrangsucCK() {
     const fetchProducts = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5000/product/getProductByCate/08bcf894-7d6b-4488-8639-701306321e22"
+          "https://backendduantotnhiep-c9935d34944c.herokuapp.com/product/getProductByCate/08bcf894-7d6b-4488-8639-701306321e22"
         );
         if (!response.ok) {
           throw new Error("Lỗi không thể tải dữ liệu");
@@ -119,7 +119,7 @@ export default function TrangsucCK() {
                                   <figure className={styles["product-image"]}>
                                     <Link href={`/components/product-detail/${_id}`}>
                                       <img
-                                        src={`http://localhost:5000/images/${hinh_anh}`}
+                                        src={`https://backendduantotnhiep-c9935d34944c.herokuapp.com/images/${hinh_anh}`}
                                         alt={ten}
                                         width="300"
                                         height="363"

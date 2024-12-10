@@ -11,7 +11,7 @@ function VoucherModal({ isOpen, onRequestClose, voucherId }) {
   useEffect(() => {
     if (isOpen && voucherId) {
       setLoading(true); // Reset loading state khi mở modal
-      fetch(`http://localhost:5000/voucher/getVoucherById/${voucherId}`)
+      fetch(`https://backendduantotnhiep-c9935d34944c.herokuapp.com/voucher/getVoucherById/${voucherId}`)
         .then((response) => {
           if (!response.ok) {
             throw new Error("Failed to fetch voucher");

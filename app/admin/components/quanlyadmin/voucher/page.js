@@ -48,7 +48,7 @@ export default function VoucherPage() {
           const getAllVouchers = [];
           while (currentPage <= totalPages) {
             const response = await fetch(
-              `http://localhost:5000/voucher/getAllVouchers?page=${currentPage}`
+              `https://backendduantotnhiep-c9935d34944c.herokuapp.com/voucher/getAllVouchers?page=${currentPage}`
             );
             const data = await response.json();
             getAllVouchers.push(...data.vouchers);
@@ -156,7 +156,7 @@ export default function VoucherPage() {
       // Fetch all pages
       while (currentPage <= totalPages) {
         const response = await fetch(
-          `http://localhost:5000/voucher/getAllVouchers?page=${currentPage}`
+          `https://backendduantotnhiep-c9935d34944c.herokuapp.com/voucher/getAllVouchers?page=${currentPage}`
         );
         if (!response.ok) {
           throw new Error(
@@ -251,7 +251,7 @@ export default function VoucherPage() {
   const handleToggleComment = async (id, trang_thai) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/voucher/getVoucherByStatus/${id}`,
+        `https://backendduantotnhiep-c9935d34944c.herokuapp.com/voucher/getVoucherByStatus/${id}`,
         {
           method: "PUT",
         }
@@ -290,7 +290,7 @@ export default function VoucherPage() {
     setLoading(true);
     try {
       const response = await fetch(
-        `http://localhost:5000/voucher/getAllVouchers?page=${currentPage}&ma_voucher=${searchQuery}&limit=${itemsPerPage}`
+        `https://backendduantotnhiep-c9935d34944c.herokuapp.com/voucher/getAllVouchers?page=${currentPage}&ma_voucher=${searchQuery}&limit=${itemsPerPage}`
       );
       if (!response.ok) {
         throw new Error("Lỗi không thể tải dữ liệu");
@@ -343,7 +343,7 @@ export default function VoucherPage() {
     });
     try {
       const response = await fetch(
-        `http://localhost:5000/voucher/deleteVoucher/${id}`,
+        `https://backendduantotnhiep-c9935d34944c.herokuapp.com/voucher/deleteVoucher/${id}`,
         {
           method: "DELETE",
         }

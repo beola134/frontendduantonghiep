@@ -27,7 +27,7 @@ export default function ChiTietDonHang() {
   const fetchUsers = async (page = 1, limit = itemsPerPage, query = "") => {
     try {
       const response = await fetch(
-        `http://localhost:5000/donhang/getAllOrderDetails?page=${page}&limit=${limit}&ten_san_pham=${query}`
+        `https://backendduantotnhiep-c9935d34944c.herokuapp.com/donhang/getAllOrderDetails?page=${page}&limit=${limit}&ten_san_pham=${query}`
       );
 
       if (response.ok) {
@@ -127,7 +127,7 @@ export default function ChiTietDonHang() {
           const query = removeAccents(searchQuery.toLowerCase());
 
           const firstResponse = await fetch(
-            `http://localhost:5000/donhang/getAllOrderDetails?page=${currentPage}&limit=1000&ten_san_pham=${encodeURIComponent(
+            `https://backendduantotnhiep-c9935d34944c.herokuapp.com/donhang/getAllOrderDetails?page=${currentPage}&limit=1000&ten_san_pham=${encodeURIComponent(
               query
             )}`
           );
@@ -143,7 +143,7 @@ export default function ChiTietDonHang() {
 
           while (currentPage <= totalPages) {
             const response = await fetch(
-              `http://localhost:5000/donhang/getAllOrderDetails?page=${currentPage}&limit=1000&ten_san_pham=${encodeURIComponent(
+              `https://backendduantotnhiep-c9935d34944c.herokuapp.com/donhang/getAllOrderDetails?page=${currentPage}&limit=1000&ten_san_pham=${encodeURIComponent(
                 query
               )}`
             );
@@ -271,7 +271,7 @@ export default function ChiTietDonHang() {
 
           // Fetch the first page to get totalPages
           const firstResponse = await fetch(
-            `http://localhost:5000/donhang/getAllOrderDetails?page=${currentPage}&limit=1000&ten_san_pham=${encodeURIComponent(
+            `https://backendduantotnhiep-c9935d34944c.herokuapp.com/donhang/getAllOrderDetails?page=${currentPage}&limit=1000&ten_san_pham=${encodeURIComponent(
               query
             )}`
           );
@@ -288,7 +288,7 @@ export default function ChiTietDonHang() {
           // Fetch remaining pages if any
           while (currentPage <= totalPages) {
             const response = await fetch(
-              `http://localhost:5000/donhang/getAllOrderDetails?page=${currentPage}&limit=1000&ten_san_pham=${encodeURIComponent(
+              `https://backendduantotnhiep-c9935d34944c.herokuapp.com/donhang/getAllOrderDetails?page=${currentPage}&limit=1000&ten_san_pham=${encodeURIComponent(
                 query
               )}`
             );

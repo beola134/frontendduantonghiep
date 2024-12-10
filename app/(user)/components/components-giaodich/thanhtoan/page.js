@@ -42,7 +42,7 @@ export default function ThanhToan() {
   // Lấy thông tin người dùng từ server
   const fetchUserDetails = async (_id) => {
     try {
-      const response = await fetch(`http://localhost:5000/users/${_id}`);
+      const response = await fetch(`https://backendduantotnhiep-c9935d34944c.herokuapp.com/users/${_id}`);
       if (!response.ok) {
         throw new Error("Lỗi lấy thông tin người dùng");
       }
@@ -135,7 +135,7 @@ export default function ThanhToan() {
       return;
     }
     try {
-      const response = await fetch(`http://localhost:5000/voucher/ma_voucher`, {
+      const response = await fetch(`https://backendduantotnhiep-c9935d34944c.herokuapp.com/voucher/ma_voucher`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -174,7 +174,7 @@ export default function ThanhToan() {
   const ktra = async () => {
     for (const items of cartItems) {
       const reponse = await fetch(
-        `http://localhost:5000/product/check/${items._id}?quantity=${items.so_luong}`
+        `https://backendduantotnhiep-c9935d34944c.herokuapp.com/product/check/${items._id}?quantity=${items.so_luong}`
       );
       if (!reponse.ok) {
         Swal.fire({
@@ -275,7 +275,7 @@ export default function ThanhToan() {
     if (selectedPaymentMethod === "3") {
       try {
         const paymentResponse = await axios.post(
-          "http://localhost:5000/pttt/zalo",
+          "https://backendduantotnhiep-c9935d34944c.herokuapp.com/pttt/zalo",
           {
             amount: amount,
             orderDetails,
@@ -309,7 +309,7 @@ export default function ThanhToan() {
     } else {
       // Xử lý thanh toán qua các phương thức khác
       try {
-        const response = await fetch("http://localhost:5000/donhang/donhang", {
+        const response = await fetch("https://backendduantotnhiep-c9935d34944c.herokuapp.com/donhang/donhang", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -457,7 +457,7 @@ export default function ThanhToan() {
                     <p className={styles.productTitle}>Sản phẩm</p>
                     <div className={styles.productImage}>
                       <img
-                        src={`http://localhost:5000/images/${item.hinh_anh}`}
+                        src={`https://backendduantotnhiep-c9935d34944c.herokuapp.com/images/${item.hinh_anh}`}
                         alt={item.ten_san_pham}
                       />
                     </div>

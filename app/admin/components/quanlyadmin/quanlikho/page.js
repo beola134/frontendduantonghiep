@@ -36,7 +36,7 @@ export default function SanPham() {
           const allProducts = [];
           while (currentPage <= totalPages) {
             const response = await fetch(
-              `http://localhost:5000/product/getProducts?page=${currentPage}&search=${searchQuery}`
+              `https://backendduantotnhiep-c9935d34944c.herokuapp.com/product/getProducts?page=${currentPage}&search=${searchQuery}`
             );
             const data = await response.json();
             allProducts.push(...data.products);
@@ -78,7 +78,7 @@ export default function SanPham() {
               });
               if (item.hinh_anh) {
                 const response = await fetch(
-                  `http://localhost:5000/images/${item.hinh_anh}`
+                  `https://backendduantotnhiep-c9935d34944c.herokuapp.com/images/${item.hinh_anh}`
                 );
                 if (!response.ok) {
                   throw new Error(`Không thể tải ảnh từ URL: ${item.hinh_anh}`);
@@ -152,7 +152,7 @@ export default function SanPham() {
       const allProducts = [];
       while (currentPage <= totalPages) {
         const response = await fetch(
-          `http://localhost:5000/product/getProducts?page=${currentPage}&search=${searchQuery}`
+          `https://backendduantotnhiep-c9935d34944c.herokuapp.com/product/getProducts?page=${currentPage}&search=${searchQuery}`
         );
         if (!response.ok) {
           throw new Error(
@@ -170,7 +170,7 @@ export default function SanPham() {
       const images = await Promise.all(
         sortedProducts.map((item) => {
           if (item.hinh_anh) {
-            const imageUrl = `http://localhost:5000/images/${item.hinh_anh}`;
+            const imageUrl = `https://backendduantotnhiep-c9935d34944c.herokuapp.com/images/${item.hinh_anh}`;
             return new Promise((resolve) => {
               const img = new Image();
               img.crossOrigin = "Anonymous";
@@ -312,7 +312,7 @@ export default function SanPham() {
     setLoading(true);
     try {
       const response = await fetch(
-        `http://localhost:5000/product/getProducts?page=${currentPage}&search=${searchQuery}`
+        `https://backendduantotnhiep-c9935d34944c.herokuapp.com/product/getProducts?page=${currentPage}&search=${searchQuery}`
       );
       if (!response.ok) {
         throw new Error("Lỗi không thể tải dữ liệu");
@@ -421,7 +421,7 @@ export default function SanPham() {
                       <td>{ten_san_pham}</td>
                       <td>
                         <img
-                          src={`http://localhost:5000/images/${hinh_anh}`}
+                          src={`https://backendduantotnhiep-c9935d34944c.herokuapp.com/images/${hinh_anh}`}
                           alt="Sản phẩm"
                         />
                       </td>

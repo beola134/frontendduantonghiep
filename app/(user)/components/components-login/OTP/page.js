@@ -44,7 +44,7 @@ function OtpModal({ isOpen, onRequestClose }) {
     setIsLoading(true);
 
     try {
-      const response = await fetch("http://localhost:5000/users/verifyotp", {
+      const response = await fetch("https://backendduantotnhiep-c9935d34944c.herokuapp.com/users/verifyotp", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

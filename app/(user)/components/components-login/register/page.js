@@ -56,7 +56,7 @@ export default function Register() {
     validationSchema: schema,
     onSubmit: async (values, { setSubmitting, setFieldError }) => {
       try {
-        const res = await fetch("http://localhost:5000/users/register", {
+        const res = await fetch("https://backendduantotnhiep-c9935d34944c.herokuapp.com/users/register", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -95,7 +95,7 @@ export default function Register() {
   const handleLoginSuccess = async (credentialResponse) => {
     const token = credentialResponse.credential;
     try {
-      const response = await fetch("http://localhost:5000/users/auth/google", {
+      const response = await fetch("https://backendduantotnhiep-c9935d34944c.herokuapp.com/users/auth/google", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -114,7 +114,7 @@ export default function Register() {
         icon: "success",
         showConfirmButton: true,
       }).then(() => {
-        window.location.href = "http://localhost:3001";
+        window.location.href = "/";
       });
     } catch (error) {
       Swal.fire({

@@ -47,7 +47,7 @@ export default function ThemDanhmuc() {
     formData.append("mo_ta", mota);
 
     try {
-      const response = await fetch("http://localhost:5000/cate/addcate", {
+      const response = await fetch("https://backendduantotnhiep-c9935d34944c.herokuapp.com/cate/addcate", {
         method: "POST",
         body: formData,
       });
